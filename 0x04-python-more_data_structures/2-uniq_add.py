@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-def add_unique_elements(my_list):
-    unique_elements = set(my_list)
+def uniq_add(my_list=[]):
+    unique_elements = []
+    for item in my_list:
+        if item not in unique_elements:
+            unique_elements.append(item)
     return sum(unique_elements)
