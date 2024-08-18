@@ -1,2 +1,8 @@
 #!/bin/bash
-python3 - m compileall - b $PYFILE i
+python3 -m py_compile "$PYFILE"
+
+compiled_file="__pycache__/$(basename "$PYFILE" .py).cpython*.pyc"
+output_file="${PYFILE}c"
+mv $compiled_file "$output_file"
+
+rmdir __pycache__ 2>/dev/null
