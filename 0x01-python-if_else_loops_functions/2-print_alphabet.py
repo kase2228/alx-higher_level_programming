@@ -1,4 +1,1 @@
-#!/usr/bin/python3
-X = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-p = X.lower()
-print("%s" % (p))
+print("".join("{:c}".format(i) for i in range(97, 123)), end="")
